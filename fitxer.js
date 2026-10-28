@@ -1,15 +1,34 @@
+/**
+ * Clase Producto.
+ * Representa un producto mediante su nombre, precio y cantidad.
+ * Permite calcular el importe total de las unidades del producto.
+ */
 class Producto {
+
+  /**
+   * Constructor de la clase Producto.
+   * Inicializa las propiedades del producto.
+   *
+   * @param {string} nombre - Nombre del producto.
+   * @param {number} precio - Precio por unidad del producto.
+   * @param {number} cantidad - Número de unidades del producto.
+   */
   constructor(nombre, precio, cantidad) {
-    this.nombre = nombre;
-    this.precio = precio;
-    this.cantidad = cantidad;
+    this.nombre = nombre;       // Nombre del producto.
+    this.precio = precio;       // Precio de una unidad.
+    this.cantidad = cantidad;   // Cantidad de unidades.
   }
 
+  /**
+   * Calcula el precio total del producto.
+   * Multiplica el precio por unidad por la cantidad.
+   *
+   * @returns {number} Importe total del producto.
+   */
   calcularTotal() {
     return this.precio * this.cantidad;
   }
 }
-
 class Carrito {
   constructor() {
     this.productos = [];
